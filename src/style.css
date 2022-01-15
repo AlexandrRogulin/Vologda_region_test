@@ -1,0 +1,130 @@
+/* ==========
+    Fonts 
+========== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* ==========
+    Variables 
+========== */
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --light-gray: #cccccc;
+    --dark-gray: #808080;
+    --red: #ff0000;
+    --light-blue: #0598ec;
+}
+
+/* ==========
+    Global Styles 
+========== */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+  background: var(--white);
+  color: var(--dark-gray);
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+
+/* Table */
+
+table {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+table tr:not(:last-child) {
+    border-bottom: 1px solid var(--light-gray);
+    padding: 10px;
+}
+
+table tr:first-child {
+    border-bottom: 0px solid var(--light-gray);
+}
+
+table tr:not(:first-child):hover {
+    background-color: var(--light-gray);
+    transition: .5s ease-out;
+}
+
+table td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+table td:first-child {
+    text-align: right;
+}
+
+table td:not(first-child) {
+    text-align: center;
+}
+
+th {
+    font-weight: 700;
+    padding: 10px;
+}
+
+
+/* Style classes */
+
+.container {
+    width: fit-content;
+    margin: 2rem auto;
+    padding: 30px 20px 10px;
+    border: 1px solid var(--black);
+}
+
+.red {
+    color: var(--red);
+}
+
+.light-blue {
+    color: var(--light-blue);
+}
+
+.circle {
+    display: inline-block;
+    border: 7px solid;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 2rem;
+}
+
+/* Media */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.8rem;
+    }
+    .container {
+        width: 90%;
+    }
+    .circle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        font-size: 0.5rem;
+    }
+}
